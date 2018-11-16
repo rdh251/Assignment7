@@ -1,0 +1,136 @@
+/*
+	Ross Hall
+	ross_hall@student.uml.edu
+	UMass Lowell Computer Science Student
+	COMP 4610 GUI Programming 1
+	Assignment No.6: Creating an Interactive Dynamic Table
+    11/15/2018
+    
+    Description: These are the styles for the dynamic 
+    multiplication table website.
+*/
+#wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 5px;
+    background-color: #003325;
+    border-radius: 4px;
+}
+#banner {
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+    background-color: #003325;
+    
+}
+h1 {
+    text-align: center;
+    margin: 0;
+    color: #ffd633;
+    padding: 10px;
+}
+#banner button {
+    margin: 5px 0;
+    background-color: white;
+    border: 2px solid #ffd633;
+    border-radius: 10px;
+    padding: 5px 50px;
+}
+#banner button:hover {
+    box-shadow: 0px 0px 15px 5px black;
+}
+
+/**********************************************************
+    input styling
+***********************************************************/
+#inputs {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    color: #ffd633;
+}
+#inputs li {
+    display: block;
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5px 5px;
+    text-align: center;
+}
+label {
+    width: 100%;
+    overflow: hidden;
+    font-size: .75em;
+}
+input {
+    width: 80%;
+    text-align: center;
+    border-radius: 2px;
+    border: 2px solid #ffd633;
+}
+.badForm {
+    background-color: pink;
+    border: 2px solid red;
+}
+
+/*****************************************************
+    Information Styling
+******************************************************/
+#messageSpan {
+    background-color: white;
+    border-top: 5px solid #003325;
+    border-bottom: 5px solid #003325;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 10px;
+    position: sticky;
+    top: 0px;
+    text-align: center;
+    z-index: 100;
+}
+.error {
+    color: red;
+}
+
+/*************************************************
+    Table Styling
+**************************************************/
+#scroller {
+    width: 100%;
+    overflow-x: scroll;
+}
+table {
+    width: 100%;
+    border-spacing: 5px;
+    background-color: #003325;
+    border-radius: 4px;
+}
+th {
+    background-color: #ffd633;
+}
+td {
+    background-color:white;
+    border-radius: 2px;
+    text-align: center;
+    z-index: 1;
+}
+th, td {
+    border-radius: 2px;
+    padding: 5px;
+    min-width: 40px;
+}
+td:hover {
+    box-shadow: 0px 0px 15px 5px black;
+    position: relative;
+}
+.selected {
+    position: relative;
+    box-shadow: 0px 0px 15px 5px black;
+}

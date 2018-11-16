@@ -1,0 +1,50 @@
+<!--
+	Ross Hall
+	ross_hall@student.uml.edu
+	UMass Lowell Computer Science Student
+	COMP 4610 GUI Programming 1
+	Assignment No.6: Creating an Interactive Dynamic Table
+    9/29/2018
+    
+    Description: This application displays a multiplication table
+    dynamically based on inputs from the user.
+-->
+
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <title>Multiplication Table</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css"> 
+    </head>
+    <body>
+        <div id='wrapper'>
+            <div id='banner'>
+                <h1>Multiplication Table</h1>
+                <button onclick="main()">Calculate Table</button>
+                <ul id='inputs'>
+                    <li>
+                        <label>X Bound:</label><br>
+                        <input type="text" id="lowerX"/>
+                    </li>
+                    <li>
+                        <label>X Bound:</label><br>
+                        <input type="text" id="upperX"/>
+                    </li>
+                    <li>
+                        <label>Y Bound:</label><br>
+                        <input type="text" id="lowerY"/>
+                    </li>
+                    <li>
+                        <label>Y Bound:</label><br>
+                        <input type="text" id="upperY"/>
+                    </li>
+                </ul>
+            </div>
+            <span id="messageSpan">Please enter bounds for the x-axis and y-axis of the multiplication table.</span>
+            <div id='tableHolder'>  <!--The table will be built here-->
+            </div>
+        </div>
+        <script src="javascript/calculate.js"></script>
+    </body>
+</html>
