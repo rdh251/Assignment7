@@ -3,8 +3,8 @@
 	ross_hall@student.uml.edu
 	UMass Lowell Computer Science Student
 	COMP 4610 GUI Programming 1
-	Assignment No.6: Creating an Interactive Dynamic Table
-    11/15/2018
+	Assignment No.7: Using the jQuery Validation Plugin with Your Dynamic Table
+    11/24/2018
     
     Description: These are the styles for the dynamic 
     multiplication table website.
@@ -80,7 +80,7 @@ input {
 /*****************************************************
     Information Styling
 ******************************************************/
-#messageSpan {
+#infoBox {
     background-color: white;
     border-top: 5px solid #003325;
     border-bottom: 5px solid #003325;
@@ -95,9 +95,23 @@ input {
     text-align: center;
     z-index: 100;
 }
-.error {
+input.error {
+    background-color: pink;
+    border: 2px solid red;
+}
+div.error {
+    width: 80%;
+    margin: auto;
     color: red;
 }
+#multError {
+    text-align: center;
+    margin: auto;
+}
+.hide {
+    display: None;
+}
+
 
 /*************************************************
     Table Styling

@@ -3,8 +3,8 @@
 	ross_hall@student.uml.edu
 	UMass Lowell Computer Science Student
 	COMP 4610 GUI Programming 1
-	Assignment No.6: Creating an Interactive Dynamic Table
-    11/15/2018
+	Assignment No.7: Using the jQuery Validation Plugin with Your Dynamic Table
+    11/24/2018
     
     Description: This is a single page web application that displays
     a multiplication table dynamically based on inputs from the user.
@@ -16,35 +16,44 @@
         <meta charset="utf-8">
         <title>Multiplication Table</title>
         <link rel="stylesheet" type="text/css" href="css/style.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.18.0/jquery.validate.min.js"></script>
+        <script src="javascript/calculate.js"></script>
     </head>
     <body>
         <div id='wrapper'>
             <div id='banner'>
                 <h1>Multiplication Table</h1>
-                <button onclick="main()">Calculate Table</button>
-                <ul id='inputs'>
-                    <li>
-                        <label>X Bound:</label><br>
-                        <input type="text" id="lowerX"/>
-                    </li>
-                    <li>
-                        <label>X Bound:</label><br>
-                        <input type="text" id="upperX"/>
-                    </li>
-                    <li>
-                        <label>Y Bound:</label><br>
-                        <input type="text" id="lowerY"/>
-                    </li>
-                    <li>
-                        <label>Y Bound:</label><br>
-                        <input type="text" id="upperY"/>
-                    </li>
-                </ul>
+                <form id="inputForm" action="" onsubmit="return false">
+                    <button type="submit">Calculate Table</button>
+                    <ul id='inputs'>
+                        <li>
+                            <label>X Bound:</label><br>
+                            <input type="text" name="field1" autocomplete="off" id="lowerX"/>
+                        </li>
+                        <li>
+                            <label>X Bound:</label><br>
+                            <input type="text" name="field2" id="upperX"/>
+                        </li>
+                        <li>
+                            <label>Y Bound:</label><br>
+                            <input type="text" name="field3" id="lowerY"/>
+                        </li>
+                        <li>
+                            <label>Y Bound:</label><br>
+                            <input type="text" name="field4" id="upperY"/>
+                        </li>
+                    </ul>
+                </form> 
             </div>
-            <span id="messageSpan">Please enter bounds for the x-axis and y-axis of the multiplication table.</span>
+            <div id="multError"></div>
+            <div id="infoBox">
+                <span id="messageSpan">Please enter bounds for the x-axis and y-axis of the multiplication table.</span>
+                <div id='required' class='hide'>Shit is required</div>
+                <div id='digits' class='hide'>Use digits</div>
+            </div>
             <div id='tableHolder'>  <!--The table will be built here-->
             </div>
         </div>
-        <script src="javascript/calculate.js"></script>
     </body>
 </html>
